@@ -24,11 +24,10 @@
                 <label>Company</label>
                 <select name="company_id" class="form-control" value="<%= customer.company_id %>">
                     <% for (let c of companies) { %>
-                        <option value="<%= c.company_id %>" <%=customer.company_id==c.company_id ? "selected" : "" %>
-                            >
+                        <option value="<%= c.company_id %>" <%=customer.company_id==c.company_id ? "selected" : "" %>>
                             <%= c.name %>
                         </option>
-                        <% } %>
+                    <% } %>
                 </select>
             </div>
 
@@ -37,15 +36,11 @@
                 <label>Employee</label>
                 <select name="employee_id" class="form-control">
                     <% for (let e of employees) { %>
-                        <option value="<%= e.employee_id %>" <%=customer.employee_id===e.employee_id ? "selected" : ""
-                            %>
-
-                            >
+                        <option value="<%= e.employee_id %>" <%=customer.employee_id===e.employee_id ? "selected" : "" %>>
                             <%= e.first_name %>
                                 <%= e.last_name %>
                         </option>"
-
-                        <% } %>
+                    <% } %>
                 </select>
             </div>
 
@@ -54,17 +49,13 @@
                 <select name="products[]" class="form-control" multiple>
                     <% for (let p of products) { %>
                         <option value="<%= p.product_id %>"
-                            <%= selectedProducts.includes(p.product_id) ? "selected" : "" %>
-                            
-                            >
+                            <%= selectedProducts.includes(p.product_id) ? "selected" : "" %>>
                             <%= p.name %>
                         </option>
-                        <% } %>
+                    <% } %>
                 </select>
             </div>
 
-
-
-
             <button class="btn btn-primary mt-3">Submit</button>
         </form>
+
