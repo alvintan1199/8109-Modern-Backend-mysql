@@ -35,7 +35,9 @@ CREATE TABLE IF NOT EXISTS Customers (
     company_id INT NOT NULL,
     employee_id INT NOT NULL,
     FOREIGN KEY (company_id) REFERENCES Companies(company_id),
-    FOREIGN KEY (employee_id) REFERENCES Employees(employee_id)
+    FOREIGN KEY (employee_id) REFERENCES Employees(employee_id) 
+
+
 );
 
 -- Products
